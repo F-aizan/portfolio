@@ -15,7 +15,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth,window.innerHeight);
-camera.position.setZ(30);
+camera.position.setZ(10);
 camera.position.setX(-3);
 
 renderer.render(scene,camera);
@@ -56,7 +56,7 @@ function addstar(){
   scene.add(star);
 }
 
-Array(250).fill().forEach(addstar);
+Array(300).fill().forEach(addstar);
 
 //background
 const spacetexture = new THREE.TextureLoader().load('space1.jpg');
@@ -77,7 +77,7 @@ scene.add(me);
 //moon
 
 const normaltexture = new THREE.TextureLoader().load('normal.jpg');
-const moontexture = new THREE.TextureLoader().load('moon.jpeg');
+const moontexture = new THREE.TextureLoader().load('moon.jpg');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshStandardMaterial({
