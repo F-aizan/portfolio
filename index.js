@@ -11,17 +11,17 @@ const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeig
 
 const renderer = new THREE.WebGLRenderer({
   canvas : document.querySelector('#bckg'),
-})
+});
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth,window.innerHeight);
-camera.position.setZ(10);
+camera.position.setZ(30);
 camera.position.setX(-3);
 
 renderer.render(scene,camera);
 
 //torus
-const geometry = new THREE.TorusGeometry(10,3,16,100);
+const geometry = new THREE.TorusGeometry(10,3,10,100);
 
 const material = new THREE.MeshStandardMaterial({ color: 0xff6347});
 
@@ -82,43 +82,43 @@ const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshStandardMaterial({
     map: moontexture,
-    normalMap: normaltexture,
+    normalMap: normaltexture
   })
 );
 
 scene.add(moon);
 
-moon.position.z = 30;
+moon.position.z = 10;
 moon.position.setX(-10);
 
-me.position.z = -5;
-me.position.x  = 2;
+me.position.z = -7;
+me.position.x  = 2; 
 
-function moveCamera(){
+ function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
 
-  moon.rotation.x += 0.05;
-  moon.rotation.x += 0.075;
-  moon.rotation.x += 0.05;
+  moon.rotation.x += 0.07;
+  moon.rotation.y += 0.075;
+  moon.rotation.z += 0.05;
 
   me.rotation.x += 0.01;
   me.rotation.y += 0.01;
 
-  camera.position.x = t * -0.01;
+  camera.position.z = t * -0.01;
+  camera.position.x = t * -0.0002;
   camera.position.y = t * -0.0002;
-  camera.position.z = t * -0.0002;
 } 
 
 
 
 
 document.body.onscroll = moveCamera;
-moveCamera();
+moveCamera(); 
 
 //animate and render
 function animate(){
   requestAnimationFrame(animate);
-  torus.rotation.x += 0.01;
+  torus.rotation.x += 0.03;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
