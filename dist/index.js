@@ -91,7 +91,7 @@ scene.add(moon);
 moon.position.z = 10;
 moon.position.setX(-10);
 
-me.position.z = -7;
+me.position.z = -5;
 me.position.x  = 2; 
 
  function moveCamera(){
@@ -119,8 +119,8 @@ moveCamera();
 function animate(){
   requestAnimationFrame(animate);
   torus.rotation.x += 0.03;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  torus.rotation.y += 0.004;
+  torus.rotation.z += 0.05;
 
   moon.rotation.x += 0.005;
   //controls.update();
