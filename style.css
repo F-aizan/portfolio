@@ -42,7 +42,7 @@ blockquote{
   padding: 0;
   width: fit-content;
   grid-column: 3/span 9;
-  background-color: rgba(135, 14, 234, 0.8);
+  background-color: var(--dark-bg);
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: var(--spacing);
@@ -60,7 +60,7 @@ blockquote{
   grid-column: 3/8;
   margin: 0;
   padding: 0;
-  background-color: rgba(234, 14, 167, 0.8);
+  background-color: var(--dark-bg);
   margin-bottom: var(--spacing);
 }
 
