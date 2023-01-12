@@ -57,7 +57,7 @@ blockquote{
 }
 
 .skills{
-  grid-column: 3/span 6;
+  grid-column: 3/span 8;
   margin: 0;
   padding: 0;
   background-color: var(--dark-bg);
