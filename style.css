@@ -31,7 +31,7 @@ canvas{
 
 header{
   background: var(--dark-bg);
-  grid-column: 2/span 8;
+  grid-column: 2/span 6;
   font-size: 1.5rem;
   padding: 1rem;
   margin-bottom: var(--spacing);
@@ -41,7 +41,7 @@ blockquote{
   margin: 0;
   padding: 0;
   width: fit-content;
-  grid-column: 3/span 9;
+  grid-column: 3/span 6;
   background-color: var(--dark-bg);
   font-size: 1.25rem;
   line-height: 1.5;
@@ -57,7 +57,7 @@ blockquote{
 }
 
 .skills{
-  grid-column: 3/span 9;
+  grid-column: 3/span 6;
   margin: 0;
   padding: 0;
   background-color: var(--dark-bg);
