@@ -60,6 +60,7 @@ blockquote{
   grid-column: 3/span 8;
   margin: 0;
   padding: 0;
+  text-align: justify;
   background-color: var(--dark-bg);
   margin-bottom: var(--spacing);
 }
