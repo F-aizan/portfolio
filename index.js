@@ -23,7 +23,7 @@ renderer.render(scene,camera);
 //torus
 const geometry = new THREE.TorusGeometry(10,3,10,100);
 
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347});
+const material = new THREE.MeshStandardMaterial({ color: 0xff3333});
 
 const torus = new THREE.Mesh(geometry,material);
 
@@ -46,11 +46,10 @@ scene.add(ambientlight,pointlight);
 
 function addstar(){
 
-  const geometry = new THREE.SphereGeometry(0.25,24,24);
+  const geometry = new THREE.SphereGeometry(0.20,10,10);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry,material);
-
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(50));
 
   star.position.set(x,y,z);
   scene.add(star);
@@ -68,7 +67,7 @@ scene.background = spacetexture;
 //mypicture
 const mytexture = new THREE.TextureLoader().load('me3.png');
 const me = new THREE.Mesh(
-  new THREE.BoxGeometry(3,3,3),
+  new THREE.BoxGeometry(5,5,5),
   new THREE.MeshBasicMaterial({ map : mytexture})
 );
 
